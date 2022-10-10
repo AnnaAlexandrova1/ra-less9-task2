@@ -3,25 +3,25 @@ import { useState } from 'react';
 import './form.css'
 
 export default function Form({ post, onSubmit, onClose }) {
-    const [form, setForm] = useState({ text: post.content })
-    
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        onSubmit(form.text)
-    }
+  const [form, setForm] = useState({ text: post.content });
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setForm(prevState => ({...prevState, [name]: value}))
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSubmit(form.text);
+  }
 
-    return (
-        <form className='form' onSubmit={handleSubmit}>
-            <div className='form__close' onClick={onClose}>X</div>
-            <textarea className='form__textarea' name='text' value={form.text} onChange={handleChange}></textarea>
-            <button className='form__button'>Опубликовать</button>
-        </form>
-    )
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm(prevState => ({ ...prevState, [name]: value }));
+  }
+
+  return (
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="form__close" onClick={onClose}>X</div>
+      <textarea className="form__textarea" name="text" value={form.text} onChange={handleChange} />
+      <button className="form__button">Опубликовать</button>
+    </form>
+  );
 }
 
 Form.propTypes = {
