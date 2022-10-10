@@ -1,0 +1,38 @@
+.form{
+    width: 70%;
+    display: flex;
+    margin: 20px auto;
+    position: relative;
+}
+.form__close{
+   width: 30px;
+   height: 30px;
+   color: gray;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+}
+.form__close:hover{
+   width: 35px;
+   height: 35px;
+}
+.form__textarea{
+      min-height: 150px;
+      min-width: 100%;
+      margin-right: 20px;
+ 
+}
+.form__button{
+    color: white;
+    background-color: blue;
+    border: 1px solid white;
+    border-radius: 7px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.form__button:hover{
+    background-color: rgb(114, 114, 214);
+    height: 55px;
+}
