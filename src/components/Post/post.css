@@ -1,0 +1,15 @@
+.post{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 1px solid gray;
+    width: 60%;
+}
+.post__date{
+    margin-top: 20px;
+    color: grey
+}
+.post__content{
+    margin-top: 20px;
+    padding: 20px;
+}

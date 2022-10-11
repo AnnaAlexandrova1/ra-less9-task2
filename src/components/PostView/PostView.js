@@ -7,12 +7,12 @@ import links from "../../service/link";
 
 export default function PostView() {
     const [isEdit, setEdit] = useState(false);
-    const [posts] = useFetch(`${links}/posts`, isEdit);
+    const [posts] = useFetch(`http://localhost:7777/posts`, isEdit);
     const navigate = useNavigate();
     let { id } = useParams()
 
     const handleDelete = () => {
-        fetch(`${links}/posts/${id}`,
+        fetch(`http://localhost:7777/posts/${id}`,
             {
                 method: 'DELETE',
             }
@@ -28,7 +28,7 @@ export default function PostView() {
     const handleSubmit = (text) => {
         const fetchBody = { id: Number(id), content: text }
         
-        fetch(`${links}/posts`,
+        fetch(`http://localhost:7777/posts`,
       {
         method: 'POST',
         body: JSON.stringify(fetchBody),

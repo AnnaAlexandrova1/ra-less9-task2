@@ -5,7 +5,7 @@ if (url.hostname === 'localhost') {
 }
 
 if (url.hostname === 'annaalexandrova1.github.io') {
-    url.hostname = 'less8task2.herokuapp.com';
+    url.hostname = 'less9backend.herokuapp.com';
     url.protocol = 'https'
 }
 

@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
+import formatDate from "../../service/formatDate";
+import './post.css'
+
 
 export default function Post({ post }) {
     const navigate = useNavigate();
@@ -10,7 +13,7 @@ export default function Post({ post }) {
 
     return (
         <div className="post" onClick={hancleClick}>
-            <div className='post__date'>Дата создания: {post.created}</div>
+        <div className='post__date'>Дата создания: {formatDate(post.created)}</div>
             <div className='post__content'>{post.content}</div>
         </div>
     )

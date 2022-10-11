@@ -6,8 +6,8 @@ export default function AddPost() {
   const navigate = useNavigate();
 
   const handleSubmit = (text) => {
-    const fetchBody = { id: 0, content: text };
-    fetch(`${links}/posts`,
+    const fetchBody = { id: 3, content: text };
+    fetch(`http://localhost:7777/posts`,
       {
         method: 'POST',
         body: JSON.stringify(fetchBody),
